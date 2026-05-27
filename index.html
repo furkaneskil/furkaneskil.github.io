@@ -32,8 +32,14 @@
       </symbol>
     </svg>
 
+    <div class="language-toggle" aria-label="Language selector">
+      <button type="button" data-lang-option="tr" aria-pressed="false">TR</button>
+      <span aria-hidden="true"></span>
+      <button class="active" type="button" data-lang-option="en" aria-pressed="true">EN</button>
+    </div>
+
     <header class="mobile-header">
-      <a class="mobile-logo" href="#home">Furkan Eskil</a>
+      <a class="mobile-logo" href="#home" data-i18n="profile.name">Furkan Eskil</a>
       <button
         class="menu-toggle"
         type="button"
@@ -48,17 +54,17 @@
     </header>
 
     <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#resume">Resume</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#home" data-i18n="nav.home">Home</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#resume" data-i18n="nav.resume">Resume</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
     </nav>
 
     <aside class="rail" aria-label="Primary navigation">
       <nav class="rail-nav">
         <a class="nav-link active" href="#home" aria-label="Home" title="Home">
-          <span class="nav-label">Home</span>
+          <span class="nav-label" data-i18n="nav.home">Home</span>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M3.5 11.2 12 4l8.5 7.2v8.3a1 1 0 0 1-1 1h-5.2v-6.1H9.7v6.1H4.5a1 1 0 0 1-1-1v-8.3Z"
@@ -66,7 +72,7 @@
           </svg>
         </a>
         <a class="nav-link" href="#about" aria-label="About" title="About">
-          <span class="nav-label">About</span>
+          <span class="nav-label" data-i18n="nav.about">About</span>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M12 12.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Zm-7 8c.7-3.6 3.5-5.7 7-5.7s6.3 2.1 7 5.7H5Z"
@@ -74,7 +80,7 @@
           </svg>
         </a>
         <a class="nav-link" href="#resume" aria-label="Resume" title="Resume">
-          <span class="nav-label">Resume</span>
+          <span class="nav-label" data-i18n="nav.resume">Resume</span>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M6.5 3.5h8.3l3.7 3.7v13.3h-12v-17Zm7.7 0v4.3h4.3M8.8 11.2h6.4M8.8 14.6h6.4M8.8 18h4.3"
@@ -87,7 +93,7 @@
           aria-label="Projects"
           title="Projects"
         >
-          <span class="nav-label">Projects</span>
+          <span class="nav-label" data-i18n="nav.projects">Projects</span>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="M4 6.5A2.5 2.5 0 0 1 6.5 4h4.1l2 2H18A2.5 2.5 0 0 1 20.5 8v9.5A2.5 2.5 0 0 1 18 20H6.5A2.5 2.5 0 0 1 4 17.5v-11Z"
@@ -100,7 +106,7 @@
           aria-label="Contact"
           title="Contact"
         >
-          <span class="nav-label">Contact</span>
+          <span class="nav-label" data-i18n="nav.contact">Contact</span>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path
               d="m3.3 11.6 17.4-8.1-4.8 17-4.1-6.6-6.9 3.1-1.6-5.4Zm7.6 1 3.7 5.8 3.3-11.5-10.8 5 3.8.7Z"
@@ -114,25 +120,95 @@
       <div class="site-grid">
         <div class="main-column">
           <section class="hero section active-panel" id="home">
-            <h1>Furkan Eskil,<br /><span>Computer Engineer</span></h1>
+            <h1>
+              <span class="hero-name" data-i18n="profile.name">Furkan Eskil</span>,<br /><span
+                class="hero-title"
+                data-i18n="hero.title"
+                >Computer Engineer</span
+              >
+            </h1>
+            <section class="side-card profile-card mobile-profile-card">
+              <div class="profile-top">
+                <img
+                  src="https://unavatar.io/x/nb42c"
+                  alt="Furkan Eskil profile picture from X"
+                />
+                <div>
+                  <h2>
+                    <span class="profile-name" data-i18n="profile.name">Furkan Eskil</span>
+                    <span>(@nb42c)</span>
+                  </h2>
+                  <p data-i18n="hero.title">Computer Engineer</p>
+                </div>
+              </div>
+              <p data-i18n="side.bio">
+                Computer Engineer from Turkey. Interested in software
+                engineering, backend systems, network programming and turning
+                unclear problems into working software.
+              </p>
+              <h3 data-i18n="side.focusTitle">Current focus</h3>
+              <p data-i18n="side.focusText">
+                Continuing to improve in backend systems, API design and
+                network programming, while growing my professional network.
+              </p>
+              <h3 data-i18n="side.roleTitle">Looking for a role</h3>
+              <p data-i18n="side.roleText">
+                Looking for a software engineering role where I can work on real
+                product and systems problems. I want to keep learning, take
+                ownership and contribute to a team that cares about the work.
+              </p>
+              <a class="wide-link" href="#contact"
+                ><span data-i18n="side.cta">Get in touch</span>
+                <svg aria-hidden="true"><use href="#icon-external"></use></svg
+              ></a>
+              <div class="card-socials">
+                <a
+                  href="https://github.com/furkaneskil"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="GitHub"
+                  title="GitHub"
+                >
+                  <svg aria-hidden="true"><use href="#icon-github"></use></svg>
+                </a>
+                <a
+                  href="https://x.com/nb42c"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="X"
+                  title="X"
+                >
+                  <svg aria-hidden="true"><use href="#icon-x"></use></svg>
+                </a>
+                <a
+                  href="https://linkedin.com/in/furkaneskil"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="LinkedIn"
+                  title="LinkedIn"
+                >
+                  <svg aria-hidden="true"><use href="#icon-linkedin"></use></svg>
+                </a>
+              </div>
+            </section>
             <div class="about-copy home-about">
-              <p>
+              <p data-i18n="home.p1">
                 I'm Furkan Eskil, a Computer Engineer from Turkey and a Cukurova
-                University graduate. I care about building from fundamentals:
-                programming languages, data structures, algorithms, databases,
-                Linux, Git, request/response flows, WebSocket communication and
-                socket programming.
+                University graduate. I work around backend systems, APIs and
+                network programming, with a focus on programming languages, data
+                structures, algorithms, databases, Unix-based systems, Git,
+                request/response flows, WebSocket communication and socket
+                programming.
               </p>
-              <p>
-                Professionally, I have worked on inventory management flows and
-                RESTful API endpoints at Ploud, OCPP 1.6/WebSocket
-                communication for EV charging systems at Maksopus, and earlier
-                backend foundations around MVC architecture and ORM usage at
-                Provera. Those experiences shaped how I think about
-                well-defined APIs, explicit data flow, predictable state and
-                boring reliability.
+              <p data-i18n="home.p2">
+                Professionally, I worked on inventory management and RESTful API
+                endpoints at Ploud, OCPP 1.6/WebSocket communication for EV
+                charging systems at Maksopus, and backend fundamentals around
+                MVC architecture and ORM usage at Provera. In these roles, I
+                focused on data flow, endpoint design and backend integration
+                points.
               </p>
-              <p>
+              <p data-i18n="home.p3">
                 I like learning close to the metal of the problem: reading
                 documentation, tracing how data moves, testing assumptions, and
                 breaking things down until the system feels explainable. Outside
@@ -144,26 +220,52 @@
           </section>
 
           <section class="section about-section" id="about">
-            <p class="about-lead">
+            <p class="about-lead" data-i18n="about.lead">
               The part I enjoy most is turning uncertainty into structure:
               finding the shape of a problem, designing the path forward, and
               building the thing.
             </p>
+            <div class="about-copy mobile-about-copy">
+              <p data-i18n="home.p1">
+                I'm Furkan Eskil, a Computer Engineer from Turkey and a Cukurova
+                University graduate. I work around backend systems, APIs and
+                network programming, with a focus on programming languages, data
+                structures, algorithms, databases, Unix-based systems, Git,
+                request/response flows, WebSocket communication and socket
+                programming.
+              </p>
+              <p data-i18n="home.p2">
+                Professionally, I worked on inventory management and RESTful API
+                endpoints at Ploud, OCPP 1.6/WebSocket communication for EV
+                charging systems at Maksopus, and backend fundamentals around
+                MVC architecture and ORM usage at Provera. In these roles, I
+                focused on data flow, endpoint design and backend integration
+                points.
+              </p>
+              <p data-i18n="home.p3">
+                I like learning close to the metal of the problem: reading
+                documentation, tracing how data moves, testing assumptions, and
+                breaking things down until the system feels explainable. Outside
+                of coding, I write and think about software architecture,
+                engineering tradeoffs, and the parts of real-world development
+                that do not fit neatly into tutorials.
+              </p>
+            </div>
 
             <div class="about-block">
-              <h2>Experience & Credentials</h2>
+              <h2 data-i18n="about.credentialsTitle">Experience & Credentials</h2>
               <div class="credential-list">
                 <p>
-                  <strong>BSc Computer Engineering</strong
-                  ><span>Cukurova University, graduated June 2025</span>
+                  <strong data-i18n="about.educationTitle">BSc Computer Engineering</strong
+                  ><span data-i18n="about.education">Cukurova University, graduated June 2025</span>
                 </p>
                 <p>
-                  <strong>Software Engineering Intern</strong
-                  ><span>Ploud, Istanbul, Jan 2025 - Mar 2025</span>
+                  <strong data-i18n="about.ploudTitle">Software Engineering Intern</strong
+                  ><span data-i18n="about.ploud">Ploud, Istanbul, Jan 2025 - Mar 2025</span>
                 </p>
                 <p>
-                  <strong>Software Engineer</strong
-                  ><span>Maksopus, Adana, Oct 2022 - Apr 2023</span>
+                  <strong data-i18n="about.maksopusTitle">Software Engineer</strong
+                  ><span data-i18n="about.maksopus">Maksopus, Adana, Oct 2022 - Apr 2023</span>
                 </p>
                 <p>
                   <strong>GNU/Linux 101</strong
@@ -177,7 +279,7 @@
             </div>
 
             <div class="about-block">
-              <h2>Skills</h2>
+              <h2 data-i18n="about.skillsTitle">Skills</h2>
               <div class="skill-tags inline-tags">
                 <span>Python</span>
                 <span>Go</span>
@@ -193,7 +295,7 @@
                 <span>Algorithms</span>
                 <span>OOP</span>
                 <span>DBMS</span>
-                <span>Linux</span>
+                <span>Unix</span>
                 <span>Git</span>
                 <span>HTML/CSS</span>
                 <span>OCPP 1.6</span>
@@ -202,8 +304,8 @@
           </section>
 
           <section class="section projects-section" id="projects">
-            <h1>Personal Projects</h1>
-            <p class="projects-intro">
+            <h1 data-i18n="projects.title">Personal Projects</h1>
+            <p class="projects-intro" data-i18n="projects.intro">
               Public projects and small engineering exercises. I keep this
               section focused on personal work and what the code actually
               demonstrates.
@@ -217,10 +319,10 @@
                 </summary>
                 <div class="project-body">
                   <p>
-                    A multiplayer Rock Paper Scissors CLI built as a hands-on
+                    <span data-i18n="projects.rps.description">A multiplayer Rock Paper Scissors CLI built as a hands-on
                     network programming exercise. It uses a TCP server, terminal
                     clients, threaded message handling, score tracking and basic
-                    disconnect behavior.
+                    disconnect behavior.</span>
                   </p>
                   <div class="project-tags inline-tags">
                     <span>Python</span>
@@ -233,7 +335,7 @@
                       href="https://github.com/furkaneskil/rps-cli"
                       target="_blank"
                       rel="noopener"
-                      >Repository
+                      ><span data-i18n="common.repository">Repository</span>
                       <svg aria-hidden="true">
                         <use href="#icon-external"></use></svg
                     ></a>
@@ -248,10 +350,10 @@
                 </summary>
                 <div class="project-body">
                   <p>
-                    A small Asteroids-style game built with Pygame. The code is
+                    <span data-i18n="projects.asteroids.description">A small Asteroids-style game built with Pygame. The code is
                     organized around sprites, collision checks, asteroid
                     spawning and projectile behavior, with a small logger for
-                    inspecting runtime state while developing.
+                    inspecting runtime state while developing.</span>
                   </p>
                   <div class="project-tags inline-tags">
                     <span>Python</span>
@@ -262,7 +364,7 @@
                       href="https://github.com/furkaneskil/Asteroids"
                       target="_blank"
                       rel="noopener"
-                      >Repository
+                      ><span data-i18n="common.repository">Repository</span>
                       <svg aria-hidden="true">
                         <use href="#icon-external"></use></svg
                     ></a>
@@ -272,15 +374,15 @@
 
               <details class="project-item">
                 <summary>
-                  <span>Personal GitHub Pages Site</span>
+                  <span data-i18n="projects.site.title">Personal GitHub Pages Site</span>
                   <time datetime="2026">2026</time>
                 </summary>
                 <div class="project-body">
                   <p>
-                    This site: a static personal portfolio built with plain
+                    <span data-i18n="projects.site.description">This site: a static personal portfolio built with plain
                     HTML, CSS and minimal vanilla JavaScript. The interesting
                     constraint is the fixed app-shell layout, panel-based
-                    navigation, no framework and no build step.
+                    navigation, no framework and no build step.</span>
                   </p>
                   <div class="project-tags inline-tags">
                     <span>HTML</span>
@@ -294,13 +396,13 @@
           </section>
 
           <section class="section list-section" id="resume">
-            <h2>Resume</h2>
+            <h2 data-i18n="resume.title">Resume</h2>
 
             <article class="entry">
-              <time>Education</time>
+              <time data-i18n="resume.educationLabel">Education</time>
               <div>
-                <h3>BSc Computer Engineering</h3>
-                <p>
+                <h3 data-i18n="resume.educationTitle">BSc Computer Engineering</h3>
+                <p data-i18n="resume.educationDescription">
                   Cukurova University, graduated June 2025. Language of
                   instruction: English.
                 </p>
@@ -310,8 +412,8 @@
             <article class="entry">
               <time>2025</time>
               <div>
-                <h3>Software Developer Intern, Ploud</h3>
-                <p>
+                <h3 data-i18n="resume.ploudTitle">Software Developer Intern, Ploud</h3>
+                <p data-i18n="resume.ploudDescription">
                   Built an admin interface for inventory and category
                   management, including search and filtering, and implemented
                   RESTful API endpoints for CRUD operations and structured data
@@ -323,8 +425,8 @@
             <article class="entry">
               <time>2022-2023</time>
               <div>
-                <h3>Software Engineer, Maksopus</h3>
-                <p>
+                <h3 data-i18n="resume.maksopusTitle">Software Engineer, Maksopus</h3>
+                <p data-i18n="resume.maksopusDescription">
                   Worked on server-side OCPP 1.6/WebSocket communication between
                   EV charging stations and the backend, including real-time
                   session tracking, status updates and REST endpoints for mobile
@@ -336,8 +438,8 @@
             <article class="entry">
               <time>2018-2019</time>
               <div>
-                <h3>Web Application Developer Intern, Provera</h3>
-                <p>
+                <h3 data-i18n="resume.proveraTitle">Web Application Developer Intern, Provera</h3>
+                <p data-i18n="resume.proveraDescription">
                   Gained foundational backend development experience at a
                   small-scale technopark startup, working around RESTful API
                   design, MVC architecture and ORM usage.
@@ -346,10 +448,10 @@
             </article>
 
             <article class="entry">
-              <time>Languages</time>
+              <time data-i18n="resume.languagesLabel">Languages</time>
               <div>
                 <h3>Python, Go, Lua</h3>
-                <p>
+                <p data-i18n="resume.languagesDescription">
                   Core programming languages I use for building services, small
                   systems and practical tools.
                 </p>
@@ -357,10 +459,10 @@
             </article>
 
             <article class="entry">
-              <time>Backend</time>
+              <time data-i18n="resume.backendLabel">Backend</time>
               <div>
                 <h3>REST APIs, WebSocket, HTTP/HTTPS, JSON</h3>
-                <p>
+                <p data-i18n="resume.backendDescription">
                   Comfortable with request/response flows, real-time
                   communication, socket programming, threading and backend
                   services that communicate over defined protocols.
@@ -369,22 +471,22 @@
             </article>
 
             <article class="entry">
-              <time>Foundations</time>
+              <time data-i18n="resume.foundationsLabel">Foundations</time>
               <div>
-                <h3>Data structures, algorithms, OOP, DBMS, SQL</h3>
-                <p>
+                <h3 data-i18n="resume.foundationsTitle">Data structures, algorithms, OOP, DBMS, SQL</h3>
+                <p data-i18n="resume.foundationsDescription">
                   Grounded in core computer science concepts, database
-                  fundamentals and day-to-day tools such as Linux and Git.
+                  fundamentals and day-to-day tools such as Unix-based systems and Git.
                 </p>
               </div>
             </article>
 
             <article class="entry">
-              <time>Certs</time>
+              <time data-i18n="resume.certsLabel">Certs</time>
               <div>
                 <h3>GNU/Linux 101 and Cisco Network Security</h3>
-                <p>
-                  Built a practical base in command line usage, Linux/UNIX
+                <p data-i18n="resume.certsDescription">
+                  Built a practical base in command line usage, Unix-based
                   systems, system administration, networking and network
                   security fundamentals.
                 </p>
@@ -392,10 +494,10 @@
             </article>
 
             <article class="entry">
-              <time>Additional</time>
+              <time data-i18n="resume.additionalLabel">Additional</time>
               <div>
                 <h3>University4Society and Adana Entrepreneurship Center</h3>
-                <p>
+                <p data-i18n="resume.additionalDescription">
                   Placed 3rd at University4Society Startup Weekend, joined the
                   acceleration program and completed an incubation program at
                   AGM.
@@ -406,7 +508,7 @@
 
           <section class="section contact-section" id="contact">
             <h2 class="section-title-icon">
-              Say hi
+              <span data-i18n="contact.title">Say hi</span>
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path
                   d="M5 6.8A3.2 3.2 0 0 1 8.2 3.6h7.6A3.2 3.2 0 0 1 19 6.8v5.4a3.2 3.2 0 0 1-3.2 3.2h-4.7L6.4 20v-4.8A3.2 3.2 0 0 1 5 12.2V6.8Z"
@@ -415,9 +517,10 @@
                 <path d="M9 12h3.8" />
               </svg>
             </h2>
-            <p class="intro small">
-              Reach out for backend work, API design, networked systems,
-              practical product problems or a thoughtful technical exchange.
+            <p class="intro small" data-i18n="contact.intro">
+              Reach out for software engineering work, API design, networked
+              systems, practical product problems or a thoughtful technical
+              exchange.
             </p>
             <div class="contact-links">
               <a href="mailto:furkaneskil@gmail.com">furkaneskil@gmail.com</a>
@@ -442,29 +545,31 @@
                 alt="Furkan Eskil profile picture from X"
               />
               <div>
-                <h2>Furkan Eskil <span>(@nb42c)</span></h2>
-                <p>Computer Engineer</p>
+                <h2>
+                  <span class="profile-name" data-i18n="profile.name">Furkan Eskil</span>
+                  <span>(@nb42c)</span>
+                </h2>
+                <p data-i18n="hero.title">Computer Engineer</p>
               </div>
             </div>
-            <p>
+            <p data-i18n="side.bio">
               Computer Engineer from Turkey. Interested in software
               engineering, backend systems, network programming and turning
               unclear problems into working software.
             </p>
-            <h3>Current focus</h3>
-            <p>
-              Improving my engineering judgment, widening my perspective, and
-              meeting people who care about building useful software.
+            <h3 data-i18n="side.focusTitle">Current focus</h3>
+            <p data-i18n="side.focusText">
+              Continuing to improve in backend systems, API design and network
+              programming, while growing my professional network.
             </p>
-            <h3>Looking for a role</h3>
-            <p>
-              I am looking for an engineering role where I can work on real
-              problems, keep learning, and take responsibility for the work. I
-              love what I do, and I look forward to meeting people who feel the
-              same way.
+            <h3 data-i18n="side.roleTitle">Looking for a role</h3>
+            <p data-i18n="side.roleText">
+              Looking for a software engineering role where I can work on real
+              product and systems problems. I want to keep learning, take
+              ownership and contribute to a team that cares about the work.
             </p>
             <a class="wide-link" href="#contact"
-              >Get in touch
+              ><span data-i18n="side.cta">Get in touch</span>
               <svg aria-hidden="true"><use href="#icon-external"></use></svg
             ></a>
             <div class="card-socials">
@@ -499,14 +604,19 @@
           </section>
 
           <footer class="footer-note">
-            <p>Creativity is intelligence having fun.</p>
+            <p data-i18n="footer.quote">Creativity is intelligence having fun.</p>
             <p>
-              ©2026 Furkan Eskil.
+              <span data-i18n="footer.copyright">©2026 Furkan Eskil.</span>
             </p>
           </footer>
         </aside>
       </div>
     </main>
+
+    <footer class="mobile-watermark">
+      <span data-i18n="footer.quote">Creativity is intelligence having fun.</span>
+      <span data-i18n="footer.copyright">©2026 Furkan Eskil.</span>
+    </footer>
 
     <script src="script.js"></script>
   </body>
