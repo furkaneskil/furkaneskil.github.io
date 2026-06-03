@@ -637,7 +637,20 @@ h3 {
 
 .footer-note p:first-child {
   color: #d0d0d7;
-  font-weight: 600;
+}
+
+.footer-note p:last-child {
+  color: #7f8088;
+}
+
+.footer-quote-text {
+  color: #a7a7b1;
+  font-style: italic;
+}
+
+.footer-quote-author {
+  color: #d0d0d7;
+  font-weight: 700;
 }
 
 .mobile-header,
@@ -722,9 +735,12 @@ h3 {
     line-height: 1.35;
   }
 
-  .mobile-watermark span:first-child {
+  .mobile-watermark > span:first-child {
     color: #d0d0d7;
-    font-weight: 600;
+  }
+
+  .mobile-watermark > span:last-child {
+    color: #7f8088;
   }
 }
 

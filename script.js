@@ -15,7 +15,7 @@ const translations = {
     "home.p1":
       "I'm Furkan Eskil, a Computer Engineer from Turkey and a Cukurova University graduate. I work around backend systems, APIs and network programming, with a focus on programming languages, data structures, algorithms, databases, Unix-based systems, Git, request/response flows, WebSocket communication and socket programming.",
     "home.p2":
-      "Professionally, I worked on inventory management and RESTful API endpoints at Ploud, OCPP 1.6/WebSocket communication for EV charging systems at Maksopus, and backend fundamentals around MVC architecture and ORM usage at Provera. In these roles, I focused on data flow, endpoint design and backend integration points.",
+      "Professionally, I worked on inventory management and RESTful API endpoints at Ploud, OCPP/WebSocket communication for EV charging systems at Maksopus, and backend fundamentals around MVC architecture and ORM usage at Provera. In these roles, I focused on data flow, endpoint design and backend integration points.",
     "home.p3":
       "I like learning close to the metal of the problem: reading documentation, tracing how data moves, testing assumptions, and breaking things down until the system feels explainable. Outside of coding, I write and think about software architecture, engineering tradeoffs, and the parts of real-world development that do not fit neatly into tutorials.",
     "about.lead":
@@ -49,7 +49,7 @@ const translations = {
       "Built an admin interface for inventory and category management, including search and filtering, and implemented RESTful API endpoints for CRUD operations and structured data flow.",
     "resume.maksopusTitle": "Software Engineer, Maksopus",
     "resume.maksopusDescription":
-      "Worked on server-side OCPP 1.6/WebSocket communication between EV charging stations and the backend, including real-time session tracking, status updates and REST endpoints for mobile charging flows.",
+      "Worked on server-side OCPP/WebSocket communication between EV charging stations and the backend, including real-time session tracking, status updates and REST endpoints for mobile charging flows.",
     "resume.proveraTitle": "Web Application Developer Intern, Provera",
     "resume.proveraDescription":
       "Gained foundational backend development experience at a small-scale technopark startup, working around RESTful API design, MVC architecture and ORM usage.",
@@ -81,7 +81,7 @@ const translations = {
     "side.roleText":
       "Looking for a software engineering role where I can work on real product and systems problems. I want to keep learning, take ownership and contribute to a team that cares about the work.",
     "side.cta": "Get in touch",
-    "footer.quote": "Creativity is intelligence having fun.",
+    "footer.quote": '“Be curious. Read widely. Try new things. What people call intelligence just boils down to curiosity.” ― Aaron Swartz',
     "footer.copyright": "©2026 Furkan Eskil.",
   },
   tr: {
@@ -98,7 +98,7 @@ const translations = {
     "home.p1":
       "Ben Furkan Eşkil. Çukurova Üniversitesi Bilgisayar Mühendisliği mezunuyum. Backend sistemler, API'ler ve ağ programlama üzerine çalışıyorum. Bu alanlarda programlama dilleri, veri yapıları, algoritmalar, veritabanları, Unix tabanlı sistemler, Git, request/response akışları, WebSocket iletişimi ve soket programlamaya özellikle odaklanıyorum.",
     "home.p2":
-      "Ploud'da envanter yönetimi ve RESTful API endpoint'leri, Maksopus'ta elektrikli araç şarj sistemleri için OCPP 1.6/WebSocket iletişimi, Provera'da ise MVC ve ORM kullanımı etrafında backend çalışmaları yaptım. Bu işlerde özellikle veri akışı, endpoint tasarımı ve backend tarafındaki entegrasyon noktaları üzerine çalıştım.",
+      "Ploud'da envanter yönetimi ve RESTful API endpoint'leri, Maksopus'ta elektrikli araç şarj sistemleri için OCPP/WebSocket iletişimi, Provera'da ise MVC ve ORM kullanımı etrafında backend çalışmaları yaptım. Bu işlerde özellikle veri akışı, endpoint tasarımı ve backend tarafındaki entegrasyon noktaları üzerine çalıştım.",
     "home.p3":
       "Yeni bir konuya girerken önce sistemi anlamaya çalışırım: dokümantasyonu okur, verinin nereden nereye aktığını takip eder ve varsayımları test ederim. Kodun dışında yazılım mimarisi, mühendislik tercihleri ve gerçek hayatta geliştirme yaparken karşıma çıkan detaylar üzerine düşünüp yazıyorum.",
     "about.lead":
@@ -132,7 +132,7 @@ const translations = {
       "Envanter ve kategori yönetimi üzerine çalıştım; admin arayüzüne arama ve filtreleme özellikleri ekledim, bu özellikleri destekleyen RESTful API endpoint'leri yazdım.",
     "resume.maksopusTitle": "Software Engineer, Maksopus",
     "resume.maksopusDescription":
-      "Elektrikli araç şarj istasyonları ile backend arasındaki server-side OCPP 1.6/WebSocket iletişimi üzerinde çalıştım; oturum takibi, durum güncellemeleri ve şarj işlemleri için mobil uygulama ile bağlantı kuran REST endpoint'leri geliştirdim.",
+      "Elektrikli araç şarj istasyonları ile backend arasındaki server-side OCPP/WebSocket iletişimi üzerinde çalıştım; oturum takibi, durum güncellemeleri ve şarj işlemleri için mobil uygulama ile bağlantı kuran REST endpoint'leri geliştirdim.",
     "resume.proveraTitle": "Web Application Developer Intern, Provera",
     "resume.proveraDescription":
       "Küçük ölçekli bir teknopark girişiminde RESTful API tasarımı, MVC mimarisi ve ORM kullanımı etrafında temel backend geliştirme deneyimi edindim.",
@@ -164,7 +164,7 @@ const translations = {
     "side.roleText":
       "Yazılım mühendisliği alanında, gerçek ürün ve sistem problemleri üzerinde çalışabileceğim bir pozisyon arıyorum. Öğrenmeye devam edebileceğim ve sorumluluk alabileceğim bir ekipte yer almak isterim.",
     "side.cta": "İletişime geç",
-    "footer.quote": "Creativity is intelligence having fun.",
+    "footer.quote": '“Be curious. Read widely. Try new things. What people call intelligence just boils down to curiosity.” ― Aaron Swartz',
     "footer.copyright": "©2026 Furkan Eşkil.",
   },
 };
@@ -200,6 +200,24 @@ function storeLanguage(lang) {
   }
 }
 
+function formatFooterQuote(element, translation) {
+  const [quote, author] = translation.split(/\s+[―-]\s+(.+)/);
+
+  element.textContent = "";
+
+  const quoteText = document.createElement("span");
+  quoteText.className = "footer-quote-text";
+  quoteText.textContent = quote;
+  element.append(quoteText);
+
+  if (author) {
+    const authorText = document.createElement("span");
+    authorText.className = "footer-quote-author";
+    authorText.textContent = ` - ${author}`;
+    element.append(authorText);
+  }
+}
+
 function applyLanguage(lang) {
   const activeLanguage = translations[lang] ? lang : "en";
   const dictionary = translations[activeLanguage];
@@ -207,7 +225,9 @@ function applyLanguage(lang) {
   translatableElements.forEach((element) => {
     const translation = dictionary[element.dataset.i18n];
 
-    if (translation) {
+    if (translation && element.dataset.i18n === "footer.quote") {
+      formatFooterQuote(element, translation);
+    } else if (translation) {
       element.textContent = translation;
     }
   });
