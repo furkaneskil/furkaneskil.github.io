@@ -2,187 +2,165 @@ document.documentElement.classList.add("js");
 
 const translations = {
   en: {
-    "meta.title": "Furkan Eskil - Computer Engineer",
+    "meta.title": "Furkan Eskil - Computer Engineer & EEE MSc Student",
     "meta.description":
-      "Furkan Eskil, Computer Engineer focused on backend systems, APIs, networked software and pragmatic engineering.",
+      "Furkan Eskil, Computer Engineer and Electrical and Electronics Engineering MSc student with an artificial intelligence focus.",
     "nav.home": "Home",
     "nav.about": "About",
     "nav.resume": "Resume",
-    "nav.projects": "Projects",
     "nav.contact": "Contact",
     "profile.name": "Furkan Eskil",
-    "hero.title": "Computer Engineer",
+    "hero.title": "Computer Engineer & EEE MSc Student",
     "home.p1":
-      "I'm Furkan Eskil, a Computer Engineer from Turkey and a Cukurova University graduate. I work around backend systems, APIs and network programming, with a focus on programming languages, data structures, algorithms, databases, Unix-based systems, Git, request/response flows, WebSocket communication and socket programming.",
+      "I'm Furkan Eskil, a Computer Engineering graduate from Cukurova University and a thesis-based Electrical and Electronics Engineering MSc student at Mersin University.",
     "home.p2":
-      "Professionally, I worked on inventory management and RESTful API endpoints at Ploud, OCPP/WebSocket communication for EV charging systems at Maksopus, and backend fundamentals around MVC architecture and ORM usage at Provera. In these roles, I focused on data flow, endpoint design and backend integration points.",
+      "I worked as a Software Engineer at Maksopus, exploring and prototyping communication between applications and server-side systems. My other experience includes software development internships at Provera, Select Bilisim and Ploud.",
     "home.p3":
-      "I like learning close to the metal of the problem: reading documentation, tracing how data moves, testing assumptions, and breaking things down until the system feels explainable. Outside of coding, I write and think about software architecture, engineering tradeoffs, and the parts of real-world development that do not fit neatly into tutorials.",
+      "I am currently focused on my AI-oriented master's studies and especially interested in applications of artificial intelligence within electrical and electronics engineering.",
     "about.lead":
-      "The part I enjoy most is turning uncertainty into structure: finding the shape of a problem, designing the path forward, and building the thing.",
-    "about.credentialsTitle": "Experience & Credentials",
-    "about.educationTitle": "BSc Computer Engineering",
-    "about.education": "Cukurova University, graduated June 2025",
-    "about.ploudTitle": "Software Engineering Intern",
-    "about.ploud": "Ploud, Istanbul, Jan 2025 - Mar 2025",
-    "about.maksopusTitle": "Software Engineer",
-    "about.maksopus": "Maksopus, Adana, Oct 2022 - Apr 2023",
-    "about.skillsTitle": "Skills",
-    "projects.title": "Personal Projects",
-    "projects.intro":
-      "Personal projects and small software projects I built for learning.",
-    "projects.rps.description":
-      "A multiplayer Rock Paper Scissors CLI built as a hands-on network programming exercise. It uses a TCP server, terminal clients, threaded message handling, score tracking and basic disconnect behavior.",
-    "projects.asteroids.description":
-      "A small Asteroids-style game built with Pygame. The code is organized around sprites, collision checks, asteroid spawning and projectile behavior, with a small logger for inspecting runtime state while developing.",
-    "projects.site.title": "Personal GitHub Pages Site",
-    "projects.site.description":
-      "This site: a static personal portfolio built with plain HTML, CSS and minimal vanilla JavaScript. The interesting constraint is the fixed app-shell layout, panel-based navigation, no framework and no build step.",
-    "common.repository": "Repository",
+      "My background in computer engineering led me to pursue graduate study in electrical and electronics engineering, where I am interested in exploring applications of artificial intelligence across engineering problems.",
     "resume.title": "Resume",
     "resume.educationLabel": "Education",
+    "resume.experienceLabel": "Experience",
+    "resume.credentialsLabel": "Certifications & Additional Experience",
+    "resume.masterPeriod": "2025-Present",
+    "resume.masterTitle": "MSc Electrical and Electronics Engineering",
+    "resume.masterDescription":
+      "Mersin University, Sep 2025 - Present. Thesis-based program with an artificial intelligence focus.",
     "resume.educationTitle": "BSc Computer Engineering",
     "resume.educationDescription":
       "Cukurova University, graduated June 2025. Language of instruction: English.",
+    "resume.educationPeriod": "2025",
     "resume.ploudTitle": "Software Developer Intern, Ploud",
     "resume.ploudDescription":
-      "Built an admin interface for inventory and category management, including search and filtering, and implemented RESTful API endpoints for CRUD operations and structured data flow.",
+      "Short-term internship in Istanbul.",
+    "resume.ploudPeriod": "Jan-Mar 2025",
     "resume.maksopusTitle": "Software Engineer, Maksopus",
     "resume.maksopusDescription":
-      "Worked on server-side OCPP/WebSocket communication between EV charging stations and the backend, including real-time session tracking, status updates and REST endpoints for mobile charging flows.",
+      "Explored and prototyped communication between applications and server-side systems.",
+    "resume.maksopusPeriod": "Oct 2022-Apr 2023",
+    "resume.selectTitle": "Software Developer Intern, Select Bilisim",
+    "resume.selectDescription":
+      "Short-term remote internship.",
+    "resume.selectPeriod": "Jul-Sep 2022",
     "resume.proveraTitle": "Web Application Developer Intern, Provera",
     "resume.proveraDescription":
-      "Gained foundational backend development experience at a small-scale technopark startup, working around RESTful API design, MVC architecture and ORM usage.",
-    "resume.languagesLabel": "Languages",
-    "resume.languagesDescription":
-      "Programming languages I use for building services, command-line tools and personal projects.",
-    "resume.backendLabel": "Backend",
-    "resume.backendDescription":
-      "Comfortable with request/response flows, WebSocket communication, socket programming, threading and backend services.",
-    "resume.foundationsLabel": "Foundations",
-    "resume.foundationsTitle": "Data structures, algorithms, OOP, DBMS, SQL",
-    "resume.foundationsDescription":
-      "Grounded in core computer science concepts, database fundamentals and day-to-day tools such as Unix-based systems and Git.",
-    "resume.certsLabel": "Certs",
+      "Observed and contributed to web application development processes at a small technopark startup.",
+    "resume.proveraPeriod": "Oct 2018-Aug 2019",
+    "resume.skillsLabel": "Skills",
+    "resume.skillsDescription": "Unix-like systems and command-line tools.",
+    "resume.certsTitle": "GNU/Linux 101 and Cisco Network Security Training",
     "resume.certsDescription":
-      "Built a practical base in command line usage, Unix-based systems, system administration, networking and network security fundamentals.",
-    "resume.additionalLabel": "Additional",
+      "M. Akgul Free Software Camp and Cisco Networking Academy.",
+    "resume.additionalTitle":
+      "University4Society and Adana Entrepreneurship Center",
     "resume.additionalDescription":
       "Placed 3rd at University4Society Startup Weekend, joined the acceleration program and completed an incubation program at AGM.",
     "contact.title": "Say hi",
     "contact.intro":
-      "Reach out for software engineering work, API design, networked systems, practical product problems or a thoughtful technical exchange.",
+      "Reach out regarding research projects and artificial intelligence-related opportunities aligned with my graduate studies, or for a thoughtful technical exchange.",
     "side.bio":
-      "Computer Engineer from Turkey. Interested in software engineering, backend systems, network programming and turning unclear problems into working software.",
+      "Computer Engineer and Electrical and Electronics Engineering MSc student from Turkey.",
     "side.focusTitle": "Current focus",
     "side.focusText":
-      "Continuing to improve in backend systems, API design and network programming, while growing my professional network.",
-    "side.roleTitle": "Looking for a role",
+      "Focusing on my AI-oriented master's studies and the application of artificial intelligence within electrical and electronics engineering.",
+    "side.roleTitle": "Relevant opportunities",
     "side.roleText":
-      "Looking for a software engineering role where I can work on real product and systems problems. I want to keep learning, take ownership and contribute to a team that cares about the work.",
+      "Open to research projects and artificial intelligence-related opportunities aligned with my graduate studies.",
     "side.cta": "Get in touch",
     "footer.quote": '“Be curious. Read widely. Try new things. What people call intelligence just boils down to curiosity.” ― Aaron Swartz',
     "footer.copyright": "©2026 Furkan Eskil.",
   },
   tr: {
-    "meta.title": "Furkan Eşkil - Bilgisayar Mühendisi",
+    "meta.title": "Furkan Eşkil - Bilgisayar Mühendisi ve EEM Yüksek Lisans Öğrencisi",
     "meta.description":
-      "Furkan Eşkil, backend sistemler, API'ler ve ağ programlama üzerine çalışan Bilgisayar Mühendisi.",
+      "Furkan Eşkil, Bilgisayar Mühendisi ve yapay zeka odaklı Elektrik-Elektronik Mühendisliği tezli yüksek lisans öğrencisi.",
     "nav.home": "Ana Sayfa",
     "nav.about": "Hakkımda",
     "nav.resume": "Özgeçmiş",
-    "nav.projects": "Projeler",
     "nav.contact": "İletişim",
     "profile.name": "Furkan Eşkil",
-    "hero.title": "Bilgisayar Mühendisi",
+    "hero.title": "Bilgisayar Mühendisi ve Elektrik-Elektronik Mühendisliği Yüksek Lisans Öğrencisi",
     "home.p1":
-      "Ben Furkan Eşkil. Çukurova Üniversitesi Bilgisayar Mühendisliği mezunuyum. Backend sistemler, API'ler ve ağ programlama üzerine çalışıyorum. Bu alanlarda programlama dilleri, veri yapıları, algoritmalar, veritabanları, Unix tabanlı sistemler, Git, request/response akışları, WebSocket iletişimi ve soket programlamaya özellikle odaklanıyorum.",
+      "Ben Furkan Eşkil. Çukurova Üniversitesi Bilgisayar Mühendisliği mezunuyum ve Mersin Üniversitesi Elektrik-Elektronik Mühendisliği tezli yüksek lisans öğrencisiyim.",
     "home.p2":
-      "Ploud'da envanter yönetimi ve RESTful API endpoint'leri, Maksopus'ta elektrikli araç şarj sistemleri için OCPP/WebSocket iletişimi, Provera'da ise MVC ve ORM kullanımı etrafında backend çalışmaları yaptım. Bu işlerde özellikle veri akışı, endpoint tasarımı ve backend tarafındaki entegrasyon noktaları üzerine çalıştım.",
+      "Maksopus'ta Yazılım Mühendisi olarak çalıştım; uygulamalar ve sunucu tarafı sistemler arasındaki iletişim üzerine öğrenme ve prototipleme çalışmaları yaptım. Diğer deneyimlerim arasında Provera, Select Bilişim ve Ploud'daki yazılım geliştirme stajları bulunuyor.",
     "home.p3":
-      "Yeni bir konuya girerken önce sistemi anlamaya çalışırım: dokümantasyonu okur, verinin nereden nereye aktığını takip eder ve varsayımları test ederim. Kodun dışında yazılım mimarisi, mühendislik tercihleri ve gerçek hayatta geliştirme yaparken karşıma çıkan detaylar üzerine düşünüp yazıyorum.",
+      "Şu anda yapay zeka odaklı yüksek lisans çalışmalarıma odaklanıyor ve yapay zekanın elektrik-elektronik mühendisliği içindeki uygulamalarıyla özellikle ilgileniyorum.",
     "about.lead":
-      "Yazılımda beni motive eden şey, belirsiz bir problemi anlaşılır hale getirip çözüm yolunu adım adım ortaya çıkarmak.",
-    "about.credentialsTitle": "Deneyim ve Eğitim",
-    "about.educationTitle": "Lisans, Bilgisayar Mühendisliği",
-    "about.education": "Çukurova Üniversitesi, Haziran 2025 mezunu",
-    "about.ploudTitle": "Yazılım Mühendisliği Stajyeri",
-    "about.ploud": "Ploud, İstanbul, Ocak 2025 - Mart 2025",
-    "about.maksopusTitle": "Yazılım Mühendisi",
-    "about.maksopus": "Maksopus, Adana, Ekim 2022 - Nisan 2023",
-    "about.skillsTitle": "Yetenekler",
-    "projects.title": "Kişisel Projeler",
-    "projects.intro":
-      "Kişisel projelerim ve öğrenme amacıyla geliştirdiğim küçük yazılımlar.",
-    "projects.rps.description":
-      "Ağ programlama pratiği için geliştirdiğim çok oyunculu Rock Paper Scissors terminal uygulaması. TCP server, terminal client'ları, thread kullanımı, skor takibi ve bağlantı kopması durumlarını ele aldım.",
-    "projects.asteroids.description":
-      "Pygame ile geliştirdiğim küçük bir Asteroids oyunu. Sprite yapısı, çarpışma kontrolleri, oyun içi nesnelerin hareketi ve temel oyun döngüsünü içeriyor.",
-    "projects.site.title": "Kişisel Web Sitesi",
-    "projects.site.description":
-      "Plain HTML, CSS ve az miktarda vanilla JavaScript ile geliştirdiğim kişisel web sitesi. Framework ya da build aracı kullanmadan, GitHub Pages üzerinde doğrudan çalışacak şekilde hazırladım.",
-    "common.repository": "Kaynak kod",
+      "Bilgisayar mühendisliği geçmişimin ardından, mühendislik problemlerinde yapay zeka uygulamalarını araştırmak amacıyla elektrik-elektronik mühendisliği alanında yüksek lisans yapıyorum.",
     "resume.title": "Özgeçmiş",
     "resume.educationLabel": "Eğitim",
+    "resume.experienceLabel": "Deneyim",
+    "resume.credentialsLabel": "Sertifikalar ve Ek Deneyim",
+    "resume.masterPeriod": "2025-Devam Ediyor",
+    "resume.masterTitle": "Elektrik-Elektronik Mühendisliği Tezli Yüksek Lisans",
+    "resume.masterDescription":
+      "Mersin Üniversitesi, Eylül 2025 - Devam Ediyor. Yapay zeka odaklı tezli program.",
     "resume.educationTitle": "Lisans, Bilgisayar Mühendisliği",
     "resume.educationDescription":
       "Çukurova Üniversitesi, Haziran 2025 mezunu. Eğitim dili: İngilizce.",
-    "resume.ploudTitle": "Software Developer Intern, Ploud",
+    "resume.educationPeriod": "2025",
+    "resume.ploudTitle": "Yazılım Geliştirici Stajyeri, Ploud",
     "resume.ploudDescription":
-      "Envanter ve kategori yönetimi üzerine çalıştım; admin arayüzüne arama ve filtreleme özellikleri ekledim, bu özellikleri destekleyen RESTful API endpoint'leri yazdım.",
-    "resume.maksopusTitle": "Software Engineer, Maksopus",
+      "İstanbul'da kısa dönem staj.",
+    "resume.ploudPeriod": "Ocak-Mart 2025",
+    "resume.maksopusTitle": "Yazılım Mühendisi, Maksopus",
     "resume.maksopusDescription":
-      "Elektrikli araç şarj istasyonları ile backend arasındaki server-side OCPP/WebSocket iletişimi üzerinde çalıştım; oturum takibi, durum güncellemeleri ve şarj işlemleri için mobil uygulama ile bağlantı kuran REST endpoint'leri geliştirdim.",
-    "resume.proveraTitle": "Web Application Developer Intern, Provera",
+      "Uygulamalar ve sunucu tarafı sistemler arasındaki iletişim üzerine öğrenme ve prototipleme çalışmaları yaptım.",
+    "resume.maksopusPeriod": "Ekim 2022-Nisan 2023",
+    "resume.selectTitle": "Yazılım Geliştirici Stajyeri, Select Bilişim",
+    "resume.selectDescription":
+      "Kısa dönem uzaktan staj.",
+    "resume.selectPeriod": "Temmuz-Eylül 2022",
+    "resume.proveraTitle": "Web Uygulama Geliştirici, Provera",
     "resume.proveraDescription":
-      "Küçük ölçekli bir teknopark girişiminde RESTful API tasarımı, MVC mimarisi ve ORM kullanımı etrafında temel backend geliştirme deneyimi edindim.",
-    "resume.languagesLabel": "Diller",
-    "resume.languagesDescription":
-      "Servisler, komut satırı araçları ve kişisel projeler geliştirirken kullandığım programlama dilleri.",
-    "resume.backendLabel": "Backend",
-    "resume.backendDescription":
-      "Request/response akışları, WebSocket iletişimi, soket programlama, threading ve backend servisleriyle çalıştım.",
-    "resume.foundationsLabel": "Temeller",
-    "resume.foundationsTitle": "Veri yapıları, algoritmalar, OOP, DBMS, SQL",
-    "resume.foundationsDescription":
-      "Bilgisayar bilimi temelleri, veritabanı kavramları ve Unix tabanlı sistemler/Git gibi günlük geliştirme araçlarında yetkinlik sahibiyim.",
-    "resume.certsLabel": "Sertifikalar",
+      "Küçük bir teknopark girişiminde web uygulaması geliştirme süreçlerini gözlemledim ve bu süreçlere katkıda bulundum.",
+    "resume.proveraPeriod": "Ekim 2018-Ağustos 2019",
+    "resume.skillsLabel": "Yetenekler",
+    "resume.skillsDescription": "Unix-like sistemler ve komut satırı araçları.",
+    "resume.certsTitle": "GNU/Linux 101 ve Cisco Ağ Güvenliği Eğitimi",
     "resume.certsDescription":
-      "Komut satırı, Unix tabanlı sistemler, sistem yönetimi, ağ ve ağ güvenliği temelleri üzerine pratik eğitimler aldım.",
-    "resume.additionalLabel": "Ek",
+      "M. Akgül Özgür Yazılım Kampı ve Cisco Networking Academy.",
+    "resume.additionalTitle":
+      "University4Society ve Adana Girişimcilik Merkezi",
     "resume.additionalDescription":
       "University4Society Startup Weekend'de 3. oldum, devamındaki hızlandırma programına katıldım ve Adana Girişimcilik Merkezi kuluçka programını tamamladım.",
     "contact.title": "Merhaba",
     "contact.intro":
-      "Yazılım mühendisliği işleri, API tasarımı, ağ tabanlı sistemler, pratik ürün problemleri ya da herhangi bir nedenle iletişime geçmek istersen yazabilirsin.",
+      "Yüksek lisans çalışmalarımla uyumlu araştırma projeleri, yapay zeka ile ilişkili fırsatlar veya teknik fikir alışverişi için iletişime geçebilirsin.",
     "side.bio":
-      "Türkiye'den Bilgisayar Mühendisiyim. Backend sistemler, API tasarımı, ağ programlama ve yazılım mühendisliği üzerine çalışıyorum.",
+      "Türkiye'den Bilgisayar Mühendisi ve Elektrik-Elektronik Mühendisliği yüksek lisans öğrencisiyim.",
     "side.focusTitle": "Şu sıralar",
     "side.focusText":
-      "Backend sistemler, API tasarımı ve ağ programlama tarafında kendimi geliştirmeye devam ediyorum. Profesyonel ağımı da genişletmek istiyorum.",
-    "side.roleTitle": "İş arıyorum",
+      "Yapay zeka odaklı yüksek lisans çalışmalarıma ve yapay zekanın elektrik-elektronik mühendisliği içindeki uygulamalarına odaklanıyorum.",
+    "side.roleTitle": "İlgili fırsatlar",
     "side.roleText":
-      "Yazılım mühendisliği alanında, gerçek ürün ve sistem problemleri üzerinde çalışabileceğim bir pozisyon arıyorum. Öğrenmeye devam edebileceğim ve sorumluluk alabileceğim bir ekipte yer almak isterim.",
+      "Yüksek lisans çalışmalarımla uyumlu araştırma projelerine ve yapay zeka ile ilişkili fırsatlara açığım.",
     "side.cta": "İletişime geç",
     "footer.quote": '“Be curious. Read widely. Try new things. What people call intelligence just boils down to curiosity.” ― Aaron Swartz',
     "footer.copyright": "©2026 Furkan Eşkil.",
   },
 };
 
-const content = document.querySelector(".page-scroll");
+// Application setup starts below; the validation script uses this marker.
+const scrollContainer = document.querySelector(".page-scroll");
 const navLinks = Array.from(document.querySelectorAll(".nav-link, .mobile-menu a"));
 const panelLinks = Array.from(document.querySelectorAll('a[href^="#"]'));
-const sections = Array.from(document.querySelectorAll(".main-column > .section[id]"));
-const projectItems = Array.from(document.querySelectorAll(".project-item"));
+const panels = Array.from(document.querySelectorAll(".main-column > .section[id]"));
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 const languageButtons = Array.from(document.querySelectorAll("[data-lang-option]"));
+const themeToggle = document.querySelector(".theme-toggle");
 const translatableElements = Array.from(document.querySelectorAll("[data-i18n]"));
 const metaDescription = document.querySelector('meta[name="description"]');
+const openGraphTitle = document.querySelector('meta[property="og:title"]');
+const openGraphDescription = document.querySelector('meta[property="og:description"]');
 const panelAliases = {
   cv: "resume",
 };
 const languageStorageKey = "preferred-language";
+const themeStorageKey = "preferred-theme";
 
 function getStoredLanguage() {
   try {
@@ -198,6 +176,38 @@ function storeLanguage(lang) {
   } catch {
     // The site still works if storage is blocked.
   }
+}
+
+function getStoredTheme() {
+  try {
+    return localStorage.getItem(themeStorageKey);
+  } catch {
+    return null;
+  }
+}
+
+function storeTheme(theme) {
+  try {
+    localStorage.setItem(themeStorageKey, theme);
+  } catch {
+    // The site still works if storage is blocked.
+  }
+}
+
+function applyTheme(theme) {
+  const activeTheme = theme === "dark" ? "dark" : "light";
+  const nextTheme = activeTheme === "light" ? "dark" : "light";
+
+  document.documentElement.dataset.theme = activeTheme;
+
+  if (themeToggle) {
+    const label = `Switch to ${nextTheme} theme`;
+    themeToggle.setAttribute("aria-label", label);
+    themeToggle.setAttribute("title", label);
+    themeToggle.setAttribute("aria-pressed", String(activeTheme === "dark"));
+  }
+
+  storeTheme(activeTheme);
 }
 
 function formatFooterQuote(element, translation) {
@@ -239,6 +249,14 @@ function applyLanguage(lang) {
     metaDescription.setAttribute("content", dictionary["meta.description"]);
   }
 
+  if (openGraphTitle) {
+    openGraphTitle.setAttribute("content", dictionary["meta.title"]);
+  }
+
+  if (openGraphDescription) {
+    openGraphDescription.setAttribute("content", dictionary["meta.description"]);
+  }
+
   languageButtons.forEach((button) => {
     const isActive = button.dataset.langOption === activeLanguage;
 
@@ -253,8 +271,13 @@ function normalizePanelId(id) {
   return panelAliases[id] || id;
 }
 
+function isPanelAvailable(id) {
+  return id !== "about" || window.matchMedia("(max-width: 1180px)").matches;
+}
+
 function hasPanel(id) {
-  return sections.some((section) => section.id === normalizePanelId(id));
+  const panelId = normalizePanelId(id);
+  return isPanelAvailable(panelId) && panels.some((panel) => panel.id === panelId);
 }
 
 function closeMobileMenu() {
@@ -268,22 +291,22 @@ function closeMobileMenu() {
 
 function setActivePanel(id, updateHash = true) {
   const panelId = normalizePanelId(id);
-  const target = sections.find((section) => section.id === panelId);
+  const target = panels.find((panel) => panel.id === panelId);
 
-  if (!target) {
+  if (!target || !isPanelAvailable(panelId)) {
     return false;
   }
 
-  sections.forEach((section) => {
-    section.classList.toggle("active-panel", section.id === panelId);
+  panels.forEach((panel) => {
+    panel.classList.toggle("active-panel", panel.id === panelId);
   });
 
   navLinks.forEach((link) => {
     link.classList.toggle("active", link.getAttribute("href") === `#${panelId}`);
   });
 
-  if (content) {
-    content.scrollTop = 0;
+  if (scrollContainer) {
+    scrollContainer.scrollTop = 0;
   }
   closeMobileMenu();
 
@@ -326,26 +349,31 @@ languageButtons.forEach((button) => {
   });
 });
 
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const nextTheme =
+      document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
+  });
+}
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeMobileMenu();
   }
 });
 
-projectItems.forEach((item) => {
-  item.addEventListener("toggle", () => {
-    if (!item.open) {
-      return;
-    }
+window.addEventListener("resize", () => {
+  const activePanel = panels.find((panel) =>
+    panel.classList.contains("active-panel"),
+  );
 
-    projectItems.forEach((otherItem) => {
-      if (otherItem !== item) {
-        otherItem.open = false;
-      }
-    });
-  });
+  if (activePanel && !isPanelAvailable(activePanel.id)) {
+    setActivePanel("home");
+  }
 });
 
 const initialPanelId = window.location.hash ? window.location.hash.slice(1) : "home";
+applyTheme(getStoredTheme() || "light");
 applyLanguage(getStoredLanguage() || "en");
 setActivePanel(initialPanelId, false) || setActivePanel("home", false);
