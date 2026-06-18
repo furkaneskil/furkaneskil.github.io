@@ -160,7 +160,8 @@ const panelAliases = {
   cv: "resume",
 };
 const languageStorageKey = "preferred-language";
-const themeStorageKey = "preferred-theme";
+const themeStorageKey = "manual-theme";
+const systemThemeQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
 function getStoredLanguage() {
   try {
@@ -180,7 +181,8 @@ function storeLanguage(lang) {
 
 function getStoredTheme() {
   try {
-    return localStorage.getItem(themeStorageKey);
+    const storedTheme = localStorage.getItem(themeStorageKey);
+    return storedTheme === "dark" || storedTheme === "light" ? storedTheme : null;
   } catch {
     return null;
   }
@@ -192,6 +194,10 @@ function storeTheme(theme) {
   } catch {
     // The site still works if storage is blocked.
   }
+}
+
+function getSystemTheme() {
+  return systemThemeQuery.matches ? "dark" : "light";
 }
 
 function applyTheme(theme) {
@@ -206,8 +212,6 @@ function applyTheme(theme) {
     themeToggle.setAttribute("title", label);
     themeToggle.setAttribute("aria-pressed", String(activeTheme === "dark"));
   }
-
-  storeTheme(activeTheme);
 }
 
 function formatFooterQuote(element, translation) {
@@ -354,8 +358,15 @@ if (themeToggle) {
     const nextTheme =
       document.documentElement.dataset.theme === "dark" ? "light" : "dark";
     applyTheme(nextTheme);
+    storeTheme(nextTheme);
   });
 }
+
+systemThemeQuery.addEventListener("change", () => {
+  if (!getStoredTheme()) {
+    applyTheme(getSystemTheme());
+  }
+});
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
@@ -374,6 +385,6 @@ window.addEventListener("resize", () => {
 });
 
 const initialPanelId = window.location.hash ? window.location.hash.slice(1) : "home";
-applyTheme(getStoredTheme() || "dark");
+applyTheme(getStoredTheme() || getSystemTheme());
 applyLanguage(getStoredLanguage() || "en");
 setActivePanel(initialPanelId, false) || setActivePanel("home", false);
