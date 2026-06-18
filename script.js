@@ -374,6 +374,6 @@ window.addEventListener("resize", () => {
 });
 
 const initialPanelId = window.location.hash ? window.location.hash.slice(1) : "home";
-applyTheme(getStoredTheme() || "light");
+applyTheme(getStoredTheme() || "dark");
 applyLanguage(getStoredLanguage() || "en");
 setActivePanel(initialPanelId, false) || setActivePanel("home", false);
